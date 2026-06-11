@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faith Kilonzi Digital Solutions — Rate Card 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green-dark:   #3b3060;   /* deep plum-lavender — header, dark surfaces   */
+    --green-mid:    #6b5fa0;   /* mid lavender — positioning banner, borders   */
+    --green-bright: #8b7ec8;   /* lavender accent                               */
+    --green-light:  #f0edf8;   /* pale lavender tint — backgrounds              */
+    --green-accent: #a89fd4;   /* soft lavender highlight                       */
+    --white:        #ffffff;
+    --charcoal:     #1e1c2e;   /* near-black with slight purple undertone       */
+    --grey-mid:     #4a4760;
+    --grey-light:   #f6f5fb;
+    --grey-line:    #dddaf0;
+    --gold:         #7a9e7e;   /* sage green — replaces amber warning accent    */
+    --sage-dark:    #4e7a52;   /* deeper sage for text on light                 */
+    --sage-light:   #e8f2e9;   /* pale sage tint                                */
+    --font: 'Inter', sans-serif;
+  }
+
+  body {
+    font-family: var(--font);
+    background: #ece9f5;
+    color: var(--charcoal);
+  }
+
+  .page {
+    width: 794px;
+    min-height: 1123px;
+    margin: 30px auto;
+    background: var(--white);
+    box-shadow: 0 8px 40px rgba(59,48,96,0.18);
+  }
+
+  /* ── HEADER ─────────────────────────────────────── */
+  .header {
+    background: var(--green-dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 40px;
+    gap: 28px;
+  }
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .avatar-ring {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 3px solid var(--green-accent);
+    overflow: hidden;
+    flex-shrink: 0;
+    background: var(--green-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar-initials {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -1px;
+  }
+
+  .header-name h1 {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+
+  .header-name .role {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--green-accent);
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-top: 5px;
+  }
+
+  .header-credentials {
+    text-align: right;
+  }
+
+  .cred-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.85);
+    font-size: 10.5px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 3px;
+    margin: 2px 0 2px 4px;
+  }
+
+  .header-credentials .exp {
+    margin-top: 8px;
+    font-size: 10.5px;
+    color: var(--green-accent);
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* ── POSITIONING BANNER ─────────────────────────── */
+  .positioning {
+    background: var(--green-mid);
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .quote-mark {
+    font-size: 52px;
+    color: var(--green-accent);
+    line-height: 1;
+    font-weight: 900;
+    opacity: 0.6;
+    flex-shrink: 0;
+    margin-top: -8px;
+  }
+
+  .positioning-text {
+    border-left: 3px solid var(--green-accent);
+    padding-left: 16px;
+  }
+
+  .positioning-text .tagline {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  .positioning-text .sub {
+    font-size: 10.5px;
+    color: rgba(255,255,255,0.72);
+    margin-top: 5px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  /* ── SECTION LABEL ──────────────────────────────── */
+  .section-eyebrow {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    padding: 20px 40px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--grey-line);
+  }
+
+  /* ── PACKAGES GRID ──────────────────────────────── */
+  .packages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+    padding: 0 40px 20px;
+  }
+
+  .pkg-card {
+    border: 1.5px solid var(--grey-line);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pkg-card.featured {
+    border-color: var(--green-mid);
+    box-shadow: 0 4px 18px rgba(59,48,96,0.16);
+  }
+
+  .pkg-header {
+    background: var(--grey-light);
+    padding: 14px 16px 12px;
+    border-bottom: 1.5px solid var(--grey-line);
+  }
+
+  .pkg-card.featured .pkg-header {
+    background: var(--green-dark);
+    border-bottom-color: var(--green-mid);
+  }
+
+  .pkg-tier {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green-mid);
+    margin-bottom: 3px;
+  }
+
+  .pkg-card.featured .pkg-tier { color: var(--green-accent); }
+
+  .pkg-name {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: var(--charcoal);
+    line-height: 1.2;
+  }
+
+  .pkg-card.featured .pkg-name { color: var(--white); }
+
+  .pkg-price {
+    font-size: 17px;
+    font-weight: 900;
+    color: var(--green-dark);
+    margin-top: 6px;
+    line-height: 1;
+  }
+
+  .pkg-card.featured .pkg-price { color: var(--green-accent); }
+
+  .pkg-body {
+    padding: 12px 16px 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pkg-best-for {
+    font-size: 9.5px;
+    font-weight: 600;
+    color: var(--grey-mid);
+    background: var(--green-light);
+    border-radius: 3px;
+    padding: 4px 8px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .pkg-items {
+    list-style: none;
+    flex: 1;
+  }
+
+  .pkg-items li {
+    font-size: 10px;
+    color: var(--grey-mid);
+    line-height: 1.5;
+    padding: 2.5px 0;
+    padding-left: 12px;
+    position: relative;
+  }
+
+  .pkg-items li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--green-accent);
+    font-size: 8px;
+    top: 3px;
+  }
+
+  .pkg-retainer {
+    margin-top: 10px;
+    padding: 6px 10px;
+    background: var(--grey-light);
+    border-radius: 4px;
+    font-size: 9.5px;
+    color: var(--grey-mid);
+    font-weight: 500;
+    border-left: 3px solid var(--green-accent);
+  }
+
+  .pkg-card.featured .pkg-retainer {
+    background: #edf4ee;
+    color: #3d6040;
+  }
+
+  /* ── TWO-BOX ROW ─────────────────────────────────── */
+  .two-col-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 0 40px 14px;
+  }
+
+  /* ── ADDONS BOX ──────────────────────────────────── */
+  .box {
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .box-header {
+    padding: 10px 16px;
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .box-addons .box-header {
+    background: var(--green-dark);
+    color: var(--green-accent);
+  }
+
+  .box-infra .box-header {
+    background: #4e7a52;
+    color: var(--white);
+  }
+
+  .box-body {
+    padding: 12px 16px 14px;
+    border: 1.5px solid var(--grey-line);
+    border-top: none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .addon-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--grey-line);
+    gap: 8px;
+  }
+
+  .addon-item:last-child { border-bottom: none; }
+
+  .addon-name {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--charcoal);
+    flex: 1;
+    line-height: 1.3;
+  }
+
+  .addon-sub {
+    font-size: 9px;
+    color: var(--grey-mid);
+    font-weight: 400;
+    display: block;
+  }
+
+  .addon-price {
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #4e7a52;
+    white-space: nowrap;
+    text-align: right;
+  }
+
+  /* ── INFRA ITEMS ─────────────────────────────────── */
+  .infra-note {
+    font-size: 9.5px;
+    color: var(--grey-mid);
+    margin-bottom: 8px;
+    line-height: 1.4;
+    font-style: italic;
+  }
+
+  .infra-item {
+    padding: 5px 0;
+    border-bottom: 1px solid var(--grey-line);
+  }
+
+  .infra-item:last-child { border-bottom: none; }
+
+  .infra-label {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: var(--charcoal);
+  }
+
+  .infra-val {
+    font-size: 9.5px;
+    color: var(--grey-mid);
+    margin-top: 1px;
+    line-height: 1.4;
+  }
+
+  .infra-val strong { color: var(--charcoal); font-weight: 600; }
+
+  /* ── DEMARCATION + FOOTER ROW ───────────────────── */
+  .bottom-row {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 14px;
+    padding: 0 40px 0;
+  }
+
+  .demarcation {
+    background: #edf4ee;
+    border: 1.5px solid #b8d8bc;
+    border-radius: 6px;
+    padding: 14px 16px;
+  }
+
+  .demarcation h3 {
+    font-size: 9.5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #3d6040;
+    margin-bottom: 10px;
+  }
+
+  .dem-col-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .dem-col h4 {
+    font-size: 9px;
+    font-weight: 700;
+    color: #4e7a52;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .dem-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .dem-col:first-child .dem-icon { background: #4e7a52; color: white; }
+  .dem-col:last-child .dem-icon  { background: var(--grey-mid); color: white; }
+
+  .dem-col ul { list-style: none; }
+
+  .dem-col ul li {
+    font-size: 9.5px;
+    color: var(--grey-mid);
+    padding: 2px 0 2px 10px;
+    position: relative;
+    line-height: 1.4;
+  }
+
+  .dem-col ul li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: #4e7a52;
+  }
+
+  .dem-col:last-child ul li::before { color: var(--grey-mid); }
+
+  /* ── CONTACT CARD ───────────────────────────────── */
+  .contact-card {
+    background: var(--green-dark);
+    border-radius: 6px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .contact-cta {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.3px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .contact-cta span {
+    color: var(--green-accent);
+  }
+
+  .contact-items { list-style: none; }
+
+  .contact-items li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    color: rgba(255,255,255,0.8);
+    padding: 3.5px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  .contact-items li:last-child { border-bottom: none; }
+
+  .c-icon {
+    width: 18px;
+    height: 18px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 9px;
+    flex-shrink: 0;
+    color: var(--green-accent);
+  }
+
+  .terms-strip {
+    margin-top: 12px;
+    padding: 7px 10px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 4px;
+    font-size: 9px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+    border-left: 3px solid var(--green-accent);
+  }
+
+  .terms-strip strong {
+    color: var(--green-accent);
+    font-weight: 700;
+  }
+
+  /* ── FOOTER BAR ──────────────────────────────────── */
+  .footer-bar {
+    margin-top: 18px;
+    background: var(--charcoal);
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-bar .left {
+    font-size: 9px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 1px;
+  }
+
+  .footer-bar .right {
+    font-size: 9px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 1px;
+  }
+
+  .footer-bar .brand {
+    color: var(--green-accent);
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  @media print {
+    body { background: white; }
+    .page { box-shadow: none; margin: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="avatar-ring">
+        <span class="avatar-initials">FK</span>
+      </div>
+      <div class="header-name">
+        <h1>Faith Kilonzi</h1>
+        <div class="role">Snr. Software Engineer &nbsp;|&nbsp; Systems Architect</div>
+      </div>
+    </div>
+    <div class="header-credentials">
+      <span class="cred-badge">MSc. Big Data Technologies</span>
+      <span class="cred-badge">BSc. Computer Science</span>
+      <div class="exp">▸ &nbsp;7+ Years Industry Experience</div>
+    </div>
+  </header>
+
+  <!-- POSITIONING -->
+  <div class="positioning">
+    <div class="quote-mark">"</div>
+    <div class="positioning-text">
+      <div class="tagline">We don't run your store. We build the system you run your store on.</div>
+      <div class="sub">We architect fully autonomous e-commerce infrastructure (Shopify or WooCommerce) with integrated payment rails, structured inventory engines, and centralised admin dashboards for African SMEs. You retain absolute control — we deploy the stable infrastructure.</div>
+    </div>
+  </div>
+
+  <!-- PACKAGES -->
+  <div class="section-eyebrow">Core Development Packages</div>
+
+  <div class="packages">
+
+    <!-- STARTER -->
+    <div class="pkg-card">
+      <div class="pkg-header">
+        <div class="pkg-tier">Tier 01</div>
+        <div class="pkg-name">Starter Store<br><span style="font-weight:500;font-size:12px;">Self-Managed</span></div>
+        <div class="pkg-price">KES 60,000 – 80,000</div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-best-for">Best For: Startups &amp; small retail brands looking for a lean entry to online selling.</div>
+        <ul class="pkg-items">
+          <li>Shopify / WooCommerce core setup</li>
+          <li>Premium mobile-first layout</li>
+          <li>Native M-Pesa STK Push + card integration</li>
+          <li>Centralised admin dashboard</li>
+          <li>Up to 30 product uploads</li>
+          <li>1 handover training session</li>
+        </ul>
+        <div class="pkg-retainer">Support Retainer: <strong>KES 5,000 / month</strong> (optional care)</div>
+      </div>
+    </div>
+
+    <!-- GROWTH (FEATURED) -->
+    <div class="pkg-card featured">
+      <div class="pkg-header">
+        <div class="pkg-tier">Tier 02 — Most Popular</div>
+        <div class="pkg-name">Growth Store<br><span style="font-weight:500;font-size:12px;color:rgba(255,255,255,0.7);">Operational Independence</span></div>
+        <div class="pkg-price">KES 120,000 – 160,000</div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-best-for">Best For: Scaling SMEs automating inventory and eliminating manual tracking.</div>
+        <ul class="pkg-items">
+          <li>Everything in Starter</li>
+          <li>Catalog migration up to 200 products</li>
+          <li>Automated SMS/Email customer notifications</li>
+          <li>Proactive stock threshold alerts</li>
+          <li>Dynamic coupon engine</li>
+          <li>Multi-user staff permissions</li>
+          <li>Conversion analytics dashboard</li>
+        </ul>
+        <div class="pkg-retainer">Support Retainer: <strong>KES 10,000 – 15,000 / month</strong> (optional care)</div>
+      </div>
+    </div>
+
+    <!-- PREMIUM -->
+    <div class="pkg-card">
+      <div class="pkg-header">
+        <div class="pkg-tier">Tier 03</div>
+        <div class="pkg-name">Premium System<br><span style="font-weight:500;font-size:12px;">Enterprise Automation</span></div>
+        <div class="pkg-price">KES 200,000 – 350,000+</div>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-best-for">Best For: High-volume brands requiring custom architectures and workflow integrations.</div>
+        <ul class="pkg-items">
+          <li>Everything in Growth</li>
+          <li>Bespoke UI/UX engineering</li>
+          <li>Deep CRM syncing</li>
+          <li>Automated customer data segmentation</li>
+          <li>Loyalty system workflows</li>
+          <li>Custom multi-role accounting pipelines</li>
+        </ul>
+        <div class="pkg-retainer">Support Retainer: <strong>KES 20,000 – 40,000 / month</strong> (optional care)</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ADD-ONS + INFRA -->
+  <div class="two-col-row">
+
+    <!-- ADD-ONS -->
+    <div class="box box-addons">
+      <div class="box-header">Add-Ons &amp; Market-Ready Extensions</div>
+      <div class="box-body">
+        <div class="addon-item">
+          <div class="addon-name">Catalog Scaling<span class="addon-sub">Bulk parsing/upload of 50 additional items</span></div>
+          <div class="addon-price">KES 5,000</div>
+        </div>
+        <div class="addon-item">
+          <div class="addon-name">Direct Daraja C2B/B2C Hook<span class="addon-sub">Custom Safaricom API webhooks → private Paybill/Till</span></div>
+          <div class="addon-price">KES 15,000 – 30,000</div>
+        </div>
+        <div class="addon-item">
+          <div class="addon-name">Behavioral Marketing Sequence<span class="addon-sub">Cart abandonment &amp; welcome automated flows</span></div>
+          <div class="addon-price">KES 10,000 – 25,000</div>
+        </div>
+        <div class="addon-item">
+          <div class="addon-name">Advanced Intelligence Tracking<span class="addon-sub">Meta Pixel CAPI + GA4 deep-funnel tracking</span></div>
+          <div class="addon-price">KES 20,000</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFRA COSTS -->
+    <div class="box box-infra">
+      <div class="box-header">⚠ Mandatory Client Infrastructure Costs</div>
+      <div class="box-body">
+        <div class="infra-note">Paid directly by the business owner to third-party utility providers — not included in development fees.</div>
+        <div class="infra-item">
+          <div class="infra-label">Domain Registration</div>
+          <div class="infra-val"><strong>~KES 1,000 / year</strong> — Your unique .co.ke or .com address</div>
+        </div>
+        <div class="infra-item">
+          <div class="infra-label">Web Hosting / Platform</div>
+          <div class="infra-val"><strong>WooCommerce Host:</strong> KES 3,500 – 15,000 / yr (scalable cloud)</div>
+          <div class="infra-val"><strong>Shopify Plan:</strong> ~$39/mo (~KES 5,500/mo) paid to Shopify</div>
+        </div>
+        <div class="infra-item">
+          <div class="infra-label">Payment Gateway Processing</div>
+          <div class="infra-val"><strong>M-Pesa STK Push:</strong> 1.5% – 2.5% per transaction</div>
+          <div class="infra-val"><strong>Visa / Mastercard:</strong> 2.8% – 3.5% per transaction</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- DEMARCATION + CONTACT -->
+  <div class="section-eyebrow" style="padding-top:14px;">Engagement Model</div>
+
+  <div class="bottom-row">
+
+    <!-- DEMARCATION -->
+    <div class="demarcation">
+      <h3>Operational Demarcation</h3>
+      <div class="dem-col-wrap">
+        <div class="dem-col">
+          <h4><span class="dem-icon">FK</span>What We Deploy</h4>
+          <ul>
+            <li>Fully functional cloud / e-commerce system</li>
+            <li>Secure automated payment integrations</li>
+            <li>Localised staff training session</li>
+            <li>Full code &amp; handover documentation</li>
+          </ul>
+        </div>
+        <div class="dem-col">
+          <h4><span class="dem-icon">You</span>Client Responsibility</h4>
+          <ul>
+            <li>Daily order processing</li>
+            <li>Logistics &amp; last-mile deliveries</li>
+            <li>Direct customer support</li>
+            <li>Ongoing platform subscription fees</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-card">
+      <div class="contact-cta">Let's build your<br><span>digital infrastructure.</span></div>
+      <ul class="contact-items">
+        <li><span class="c-icon">✉</span>faithmueni6@gmail.com</li>
+        <li><span class="c-icon">☎</span>+254-722-395680</li>
+        <li><span class="c-icon">⌂</span>www.faithkilonzi.com</li>
+        <li><span class="c-icon">in</span>linkedin.com/in/faithkilonzi</li>
+        <li><span class="c-icon">📍</span>Nairobi, Kenya</li>
+      </ul>
+      <div class="terms-strip"><strong>Project Terms:</strong> 50% upfront commitment · 30% milestone review · 20% pre-launch</div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER BAR -->
+  <div class="footer-bar">
+    <div class="left">RATE CARD &nbsp;|&nbsp; VALID 2026</div>
+    <div class="brand">Faith Kilonzi Digital Solutions</div>
+    <div class="right">CONFIDENTIAL — NOT FOR REDISTRIBUTION</div>
+  </div>
+
+</div>
+</body>
+</html>
